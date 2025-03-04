@@ -14,7 +14,7 @@ def get_upcoming_birthdays(users):
 
         days_until_birthday = (birthday_this_year - today).days
         if 0 <= days_until_birthday <= 7:
-            if birthday_this_year.weekday() in [5, 6]:  # 5 = субота, 6 = неділя
+            if birthday_this_year.weekday() in [5, 6]:
                 birthday_this_year += datetime.timedelta(days=(7 - birthday_this_year.weekday()))
 
             upcoming_birthdays.append({
